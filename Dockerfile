@@ -12,3 +12,7 @@ EXPOSE 8080
 EXPOSE 5005
 
 CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.jvmArguments='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'"]
+
+
+COPY mvnw .
+RUN chmod +x mvnw
